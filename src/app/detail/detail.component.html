@@ -1,0 +1,111 @@
+<div class="dinfobac">
+
+  <div class="container" >
+  
+  <div class="row" style="margin-top:10px">
+  
+	
+    <div class="col-sm-3" >
+	
+	<img src= "../assets/regencylogo.png" />
+	</div>
+
+   <div class="col-sm-9">
+   <div id="container1">
+    <div class="content1">
+       Customer Details
+
+    </div>
+   </div>
+	
+	</div>
+	</div>
+
+	<!--END HEADER div -->
+	<!--START MODAL div -->
+	
+	<div class="row" style="margin-top:10px">
+	
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mineModal" data-backdrop="static" data-keyboard="false">Details</button>
+	
+	<button type="button" class="btn btn-info btn-lg" routerLink="/home">Back</button>
+	
+	
+	</div>
+	
+
+	<div class="modal fade" id="mineModal" role="dialog">
+	
+	<div class="modal-dialog" style="width:70%">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" >&times;</button>
+          <h4 class="modal-title">Registration Detail</h4>
+        </div>
+    <div class="modal-body">  
+		
+	   
+     <div class="row">
+  
+	  
+			  <ul class="nav nav-tabs">
+				  <li class="active"><a data-toggle="tab" href="#home">General Information</a></li>
+				  <li><a data-toggle="tab" href="#menu1">Rate Information</a></li>
+				  <li><a data-toggle="tab" href="#menu2">Payment Details</a></li>
+				</ul>
+
+				<div class="tab-content">
+				  <div id="home" class="tab-pane fade in active">
+					 <div class="row" style="padding:10px">
+					 
+					  <div class="col-sm-4" >
+					 
+					  hello 
+					 
+					 
+					  </div>
+					 
+					 </div>
+					 
+				  </div>
+				  <div id="menu1" class="tab-pane fade">
+					<h3>Menu 1</h3>
+					<p>Some content in menu 1.</p>
+				  </div>
+				  <div id="menu2" class="tab-pane fade">
+					<h3>Menu 2</h3>
+					<p>Some content in menu 2.</p>
+				  </div>
+				</div>
+
+	 
+	 
+	</div>
+	 
+    
+
+    
+   <div class="modal-footer" style="padding:5px; background-color: #B7DBEC;border-radius: 10px">
+       
+		 <button type="button" (click)='openpage()'>Finish</button> &nbsp;&nbsp;&nbsp;<button type="button" (click)='checkalldata()'>Cancel</button> 
+	   
+    </div>
+  
+   </div>
+   
+   
+     
+  </div>
+      
+  </div>
+ 
+  </div>
+	
+	
+<!--END MODAL  div -->
+
+
+</div>
+  </div>

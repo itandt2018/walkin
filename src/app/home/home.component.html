@@ -1,0 +1,288 @@
+<div class="dinfobac">
+
+  <div class="container" >
+  
+  <div class="row" style="margin-top:10px">
+  
+	
+    <div class="col-sm-3" >
+	
+	<img [src]='myimage' />
+	</div>
+
+   <div class="col-sm-9">
+   <div id="container1">
+    <div class="content1">
+       Walk In - Registration
+
+    </div>
+   </div>
+	
+	</div>
+	</div>
+
+	<!--END HEADER div -->
+	<!--START MODAL div -->
+	
+	<div class="row" style="margin-top:10px">
+	
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false" 
+	(click)='showwings()'>Walk In</button>
+	
+	<button type="button" class="btn btn-info btn-lg" (click)='openpage()'>Page 2</button>
+	
+	
+	</div>
+	
+
+	<div class="modal fade" id="myModal" role="dialog">
+	
+	<div class="modal-dialog" style="width:70%">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  >&times;</button>
+          <h4 class="modal-title">Walk in Registration</h4>
+        </div>
+    <div class="modal-body">  
+		
+	   
+     <div class="row">
+  
+	
+     <div class="col-sm-4" >
+	   
+	   {{loadapi}}
+	   
+	   <select class="form-control" id="selected"  (change)='selectwing()' style="font-size:16px">
+	   <option value="" selected >Select a Wing</option>
+      <option style="padding:10px" *ngFor="let postwing of allwings" value={{postwing.id}}>{{postwing.wing_name}}</option>
+      </select>
+	  
+	
+	 
+	  
+     </div>
+	 
+	 <div class="col-sm-4" >
+	  
+	  
+	   <select class="form-control" id="selectfloor" *ngIf = 'floorvalue' (change)='selectroomtype()' style="font-size:16px">
+	   <option value="" selected >Select a Floor Type</option>
+      <option style="padding:10px" *ngFor="let post of array1" value={{post.id}}>{{post.floor_name}}</option>
+      </select>
+	  
+	 
+	  
+     </div>
+	 
+	 <div class="col-sm-4" >
+	   
+	  
+	   <select class="form-control" id="selectroom" *ngIf = 'roomvalue' (change)='displayroom()' style="font-size:16px">
+	   <option value="" selected>Select a  Room Type</option>
+      <option style="padding:10px" *ngFor="let postrtype of array2" value={{postrtype.id}}>{{postrtype.room_type.room_type_name}}</option>
+      </select>
+	  
+	  
+	  
+     </div>
+	 
+	 
+	</div>
+	 
+     <!--<input type="text" name="textfield" [(ngModel)]="staticnumber"/>
+	  <button type="button" class="btn btn-primary" (click)='showvalue(dmodel.title)' >Show Value</button>
+	  {{dmodel.title}}  {{mylists[0].dname}} {{staticnumber}}
+	  <a routerLink="/test/26" class="btn btn-info" role="button">Link Button</a> <p></p>  
+	 
+	  <angular2-date-picker [(ngModel)]="date" [settings]="settings" (onDateSelect)="onDateSelect($event)"></angular2-date-picker>
+	  
+	   <option value="" selected disabled hidden>Select a  Room Type</option>
+	 -->
+	 
+	 
+	
+    <div class="showbar" *ngIf = 'showroomvalue'>
+	
+     <div class="row" >
+
+
+    <div class="col-sm-12"> 
+	
+	
+	
+ <div class="table-responsive">  
+
+
+  <table class="table dcornersd">
+    <thead>
+      <tr>
+        <td>Room Name</td>
+        <td>Alias</td>
+        <td>Room Type</td>
+        <td>Floor Name</td>
+        <td>Owner</td>
+		
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let postrooms of array3" >
+        <td>{{postrooms.room_name}}</td>
+        <td>{{postrooms.alias}}</td>
+		<td>{{postrooms.room_type.room_type_name}}</td>
+        <td>{{postrooms.floor.floor_name}}</td>
+		<td>{{postrooms.room_owner.first_name}}</td>
+        
+      </tr>
+    </tbody>
+  </table>
+  </div>
+	 </div>
+
+	</div>
+	 
+	 
+	<div class="row drates">
+	
+	<div style="height:10px; margin: 20px 0px; width:100%;background-color:#993300"></div>
+
+	<div class="col-sm-3"> 
+	  Select Rate Type: 
+	  <select class="form-control" id="selectrate"  (change)='selectratetype()' style="font-size:16px">
+	   <option value="" selected>Select a  Rate Type</option>
+      <option style="padding:10px" *ngFor="let drate of allratetype" value={{drate.id}}>{{drate.rate_type_name}}</option>
+      </select>
+
+	</div>
+	
+	<div class="col-sm-3"> 
+	  Rate Name: 
+	  <select class="form-control" id="getratename"  (change)='selectratename()' style="font-size:16px">
+	   <option value="" selected>Select a Rate Name</option>
+      <option style="padding:10px" *ngFor="let drate1 of arrayrates" value={{drate1.id}}>{{drate1.rate_name}}</option>
+      </select>
+
+	</div>
+	
+	<div class="col-sm-3"> 
+	
+     Departure: 
+	 <angular2-date-picker [(ngModel)]="date" [settings]="settings" (onDateSelect)="onDateSelect($event)"></angular2-date-picker>
+
+	</div>
+	
+	<div class="col-sm-3"> 
+	
+     Nights:
+	 <input type="text" [(ngModel)]="dnights" name="textfield" style="width:100%"/>
+
+	</div>
+	
+	
+	
+	</div>
+	
+	
+	<div class="row drates">
+	
+	<div style="height:5px; margin: 10px 0px; width:100%;"></div>
+	
+	<div class="col-sm-3"> 
+	
+     Extra Adults:
+	 <input type="number" [(ngModel)]="exadult"  style="width:100%"/>
+
+	</div>
+	
+	<div class="col-sm-3"> 
+	
+     Extra Children:
+	 <input type="number" [(ngModel)]="exchild"  style="width:100%"/>
+
+	</div>
+
+	</div>
+	
+	<div class="row" >
+	
+	
+	<div class="col-sm-12"> 
+	
+	<div style="font-size:15px;padding:3px; margin: 10px 0px; border: thin solid #993300; background-color:#993300; color:#ffffff">Tax Exempt</div>
+	
+	<div class="drates">
+	
+	<label>{{alltaxes[0].tax_name}} 
+    <input type="checkbox" name="checkbox" [(ngModel)]="taxa" value="one" style="width: 20px; height: 20px;" />
+    </label> &nbsp;&nbsp;
+	<label>{{alltaxes[1].tax_name}}
+    <input type="checkbox" name="checkbox" [(ngModel)]="taxb" value="two" style="width: 20px; height: 20px;"/>
+    </label> &nbsp;&nbsp;
+	<label>{{alltaxes[2].tax_name}}
+    <input type="checkbox" name="checkbox" [(ngModel)]="taxc" value="three"style="width: 20px; height: 20px;"/>
+    </label>  
+	
+	<button type="button" class="btn btn-primary" (click)='showmarket()' style="float: right;padding:10px;">Market Place</button>
+	</div>
+	</div>
+	
+	</div>
+	
+	
+	<div class="row"  *ngIf = 'dmarkets'>
+	
+ <div style="height:10px; margin: 30px 0px; width:100%;background-color:#993300"></div>
+
+    <div class="col-sm-3"> 
+      Select Market Type
+	  <select  id="selectbizness"  (change)='selectbizness()' style="font-size:16px;">
+	   <option value="" selected style="font-weight: bold;">Select a Market Type</option> 
+      <option style="padding:10px"   *ngFor="let dmarktype of allbizsourceype" value={{dmarktype.business_source_type.id}}>
+	  {{dmarktype.business_source_type.business_source_type_name}}</option>
+      </select>
+	  
+	</div>
+	
+	<div class="col-sm-3"> 
+      Market Source
+	  <select  id="selectbizsource"  (change)='selectbizsource()' style="font-size:16px;">
+	   <option value="" selected style="font-weight: bold;">Select a Business Source</option> 
+      <option style="padding:10px"   *ngFor="let dmarksource of arraybizness" value={{dmarksource.id}}>
+	  {{dmarksource.business_source_name}}</option>
+      </select>
+	  
+	</div>
+     
+  </div>
+	
+   
+  
+   
+
+	</div>
+    
+    
+   <div class="modal-footer" style="padding:5px; margin-top: 30px; background-color: #B7DBEC;border-radius: 10px">
+       
+		 <button type="button" (click)='openpage()'>Finish</button> &nbsp;&nbsp;&nbsp;<button type="button" (click)='checkalldata()'>Cancel</button> 
+	   
+    </div>
+  
+   </div>
+   
+   
+     
+  </div>
+      
+  </div>
+ 
+  </div>
+	
+	
+<!--END MODAL  div -->
+
+
+</div>
+  </div>

@@ -1,0 +1,280 @@
+<div class="dinfobac">
+
+  <div class="container" >
+  
+  <div class="row" style="margin-top:10px">
+  
+	
+    <div class="col-sm-3" >
+	
+	<img [src]='myimage' />
+	</div>
+
+   <div class="col-sm-9">
+   <div id="container1">
+    <div class="content1">
+       Walk In - Registration
+
+    </div>
+   </div>
+	
+	</div>
+	</div>
+
+	<!--END HEADER div -->
+	<!--START MODAL div -->
+	
+	<div class="row" style="margin-top:10px">
+	
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false" 
+	(click)='showwings()'>Walk In</button>
+	
+	
+	</div>
+	
+
+	<div class="modal fade" id="myModal" role="dialog">
+	
+	<div class="modal-dialog" style="width:70%">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close"  >&times;</button>
+          <h4 class="modal-title">Walk in Registration</h4>
+        </div>
+    <div class="modal-body">  
+		
+	   
+     <div class="row">
+  
+	
+     <div class="col-sm-4" >
+	   
+	  
+	   
+	   <select class="form-control" id="selected" style="font-size:16px">
+	   <option value="" selected >Select a Wing</option>
+      
+      </select>
+	  
+	
+	 
+	  
+     </div>
+	 
+	 <div class="col-sm-4" >
+	  
+	  
+	   <select class="form-control" id="selectfloor"   style="font-size:16px">
+	   <option value="" selected >Select a Floor Type</option>
+     
+      </select>
+	  
+	 
+	  
+     </div>
+	 
+	 <div class="col-sm-4" >
+	   
+	  
+	   <select class="form-control" id="selectroom"   style="font-size:16px">
+	   <option value="" selected>Select a  Room Type</option>
+      
+      </select>
+	  
+	  
+	  
+     </div>
+	 
+	 
+	</div>
+	 
+     <!--<input type="text" name="textfield" [(ngModel)]="staticnumber"/>
+	  <button type="button" class="btn btn-primary" (click)='showvalue(dmodel.title)' >Show Value</button>
+	  {{dmodel.title}}  {{mylists[0].dname}} {{staticnumber}}
+	  <a routerLink="/test/26" class="btn btn-info" role="button">Link Button</a> <p></p>  
+	 
+	  <angular2-date-picker [(ngModel)]="date" [settings]="settings" (onDateSelect)="onDateSelect($event)"></angular2-date-picker>
+	  
+	   <option value="" selected disabled hidden>Select a  Room Type</option>
+	 -->
+	 
+	 
+	
+    <div class="showbar">
+	
+     <div class="row" >
+
+
+    <div class="col-sm-12"> 
+	
+	
+	
+ <div class="table-responsive">  
+
+
+  <table class="table dcornersd">
+    <thead>
+      <tr>
+        <td>Room Name</td>
+        <td>Alias</td>
+        <td>Room Type</td>
+        <td>Floor Name</td>
+        <td>Owner</td>
+		
+      </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td></td>
+        <td></td>
+		<td></td>
+        <td></td>
+		<td></td>
+        
+      </tr>
+    </tbody>
+  </table>
+  </div>
+	 </div>
+
+	</div>
+	 
+	 
+	<div class="row drates">
+	
+	<div style="height:10px; margin: 20px 0px; width:100%;background-color:#993300"></div>
+
+	<div class="col-sm-3"> 
+	  Select Rate Type: 
+	  <select class="form-control" id="selectrate"   style="font-size:16px">
+	   <option value="" selected>Select a  Rate Type</option>
+     
+      </select>
+
+	</div>
+	
+	<div class="col-sm-3"> 
+	  Rate Name: 
+	  <select class="form-control" id="getratename"   style="font-size:16px">
+	   <option value="" selected>Select a Rate Name</option>
+      
+      </select>
+
+	</div>
+	
+	<div class="col-sm-3"> 
+	
+     Departure: 
+	  <input type="text"  name="textfield" style="width:100%"/>
+
+	</div>
+	
+	<div class="col-sm-3"> 
+	
+     Nights:
+	 <input type="text"  name="textfield" style="width:100%"/>
+
+	</div>
+	
+	
+	
+	</div>
+	
+	
+	<div class="row drates">
+	
+	<div style="height:5px; margin: 10px 0px; width:100%;"></div>
+	
+	<div class="col-sm-3"> 
+	
+     Extra Adults:
+	 <input type="number"   style="width:100%"/>
+
+	</div>
+	
+	<div class="col-sm-3"> 
+	
+     Extra Children:
+	 <input type="number"   style="width:100%"/>
+
+	</div>
+
+	</div>
+	
+	<div class="row" >
+	
+	
+	<div class="col-sm-12"> 
+	
+	<div style="font-size:15px;padding:3px; margin: 10px 0px; border: thin solid #993300; background-color:#993300; color:#ffffff">Tax Exempt</div>
+	
+	<div class="drates">
+	
+	<label>
+    <input type="checkbox" name="checkbox"  value="checkbox" style="width: 20px; height: 20px;" />
+    </label>
+	<label>
+    <input type="checkbox" name="checkbox"  value="checkbox" style="width: 20px; height: 20px;"/>
+    </label>
+	<label>
+    <input type="checkbox" name="checkbox"  value="checkbox"style="width: 20px; height: 20px;"/>
+    </label>
+	
+	<button type="button" class="btn btn-primary" (click)='showmarket()' style="float: right;padding:10px;">Market Place</button>
+	</div>
+	</div>
+	
+	</div>
+	
+	
+	<div class="row" >
+	
+ <div style="height:10px; margin: 30px 0px; width:100%;background-color:#993300"></div>
+
+    <div class="col-sm-12"> 
+	
+	 <div class="form-control">
+		  
+	  <select  id="selectmarket"  style="font-size:16px; width:25%">
+	   <option value="" selected style="font-weight: bold;">Select a Market Type</option> 
+     
+      </select>
+	  
+	 
+	  
+	</div>
+	</div>
+     
+  </div>
+	
+   
+  
+   
+
+	</div>
+    
+    
+   <div class="modal-footer" style="padding:5px; margin-top: 30px; background-color: #B7DBEC;border-radius: 10px">
+       
+		 <button type="button" (click)='openpage()'>Finish</button> &nbsp;&nbsp;&nbsp;<button type="button" (click)='checkalldata()'>Cancel</button> 
+	   
+    </div>
+  
+   </div>
+   
+   
+     
+  </div>
+      
+  </div>
+ 
+  </div>
+	
+	
+<!--END MODAL  div -->
+
+
+</div>
+  </div>

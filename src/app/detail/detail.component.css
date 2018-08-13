@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+} 
+
+
+.dinfobac{
+
+    background-image: url(../../assets/bacimage.jpg);
+    background-repeat: no-repeat;
+    background-size:  cover;
+	height: 100%;
+	max-height: 100%;
+	
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+
+   
+ 
+ }
+ 
+ .dinfobac1{
+
+
+ }
+ 
+ #container1{
+    display: table;
+    height: 50px;
+	width:100%;
+	
+    
+	
+   
+}
+.content1 {
+    background: #f2f2f2;
+    display: table-cell;
+    vertical-align: middle;
+	padding: 5px;
+	font-size:20px;
+	border-radius: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+ 
+ .showbar {
+   
+	width: 100%;
+	background-color: #ffffff;
+	margin-top: 20px;
+
+}
+
+.drates {
+   
+	font-size:18px;
+
+}
+ 
+ .dcorners1 {
+    border-radius: 15px;
+    background: #ffffff;
+    padding: 10px;
+	
+	width: 40%;
+	background-color: #ffffff;
+	text-align: center;
+	margin: 20px auto;
+	font-size: 20px;
+	box-shadow: 10px 10px 20px grey;
+
+}
+
+.dcornersd {
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 1px;
+	width: 100%;
+	background-color: #ffffff;
+	font-size: 16px;
+
+}
